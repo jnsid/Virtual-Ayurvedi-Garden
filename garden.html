@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Garden</title>
+  <link rel="stylesheet" href="gardenstyles.css" />
+</head>
+<body>
+  <!-- Menu Button -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+
+  <!-- Slide-out Navigation Menu -->
+  <div class="side-menu" id="sideMenu">
+    <ul>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a href="#contact-us">Contact Us</a></li>
+      <li><a href="#garden">Plants</a></li>
+      <li><a href="#treatment">Treatments</a></li>
+    </ul>
+  </div>
+
+  <!-- Landing Section -->
+  <section class="landing">
+    <div class="intro-text">
+      <h1>Welcome to the Virtual Garden</h1>
+      <p style="font-weight: bold;">Discover the healing power of Ayurveda through interactive 3D models of medicinal plants.</p>
+    </div>
+  </section>
+
+  <!-- Garden Section -->
+  <div class="container" id="garden">
+    <h2>Virtual Garden of Ayurvedic Plants</h2>
+    <div class="garden">
+      <!-- Tulsi -->
+      <div class="plant">
+        <div class="model-wrapper">
+          <iframe title="Tulsi Model" frameborder="0" allowfullscreen src="https://sketchfab.com/models/c604e8f52c234f2e9259d895fe028819/embed"></iframe>
+        </div>
+        <h3 class="plant-name">Tulsi</h3>
+        <div class="plant-info">
+          <h4>Tulsi (Holy Basil)</h4>
+          <p><strong>Benefits:</strong> Boosts immunity, reduces stress, improves digestion.</p>
+        </div>
+      </div>
+
+      <!-- Neem -->
+      <div class="plant">
+        <div class="model-wrapper">
+          <iframe title="Neem Model" frameborder="0" allowfullscreen src="https://sketchfab.com/models/03edef8009d942d3a3db6fa64cecbe56/embed"></iframe>
+        </div>
+        <h3 class="plant-name">Neem</h3>
+        <div class="plant-info">
+          <h4>Neem</h4>
+          <p><strong>Benefits:</strong> Purifies blood, improves skin health, aids digestion.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <section id="about-us">
+      <h2>About Us</h2>
+      <p>We promote wellness through Ayurvedic knowledge and interactive 3D experiences of medicinal plants.</p>
+    </section>
+    <section id="contact-us">
+      <h2>Contact Us</h2>
+      <ul>
+        <li>Email: info@virtualgarden.com</li>
+        <li>Phone: +123-456-7890</li>
+        <li>Address: 123 Green Street, Wellness City</li>
+      </ul>
+    </section>
+    <section id="treatment">
+      <h2>Treatment</h2>
+      <p>Explore natural remedies and consult certified practitioners for personalized treatments.</p>
+    </section>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.plant-name').forEach((name, i) => {
+      name.addEventListener('click', () => {
+        const iframe = name.parentElement.querySelector('iframe');
+        const src = iframe.getAttribute('src');
+        iframe.setAttribute('src', src); // reloads the iframe
+      });
+    });
+  </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleButton = document.querySelector(".menu-toggle");
+      const menu = document.getElementById("sideMenu");
+  
+      toggleButton.addEventListener("click", function () {
+        menu.classList.toggle("open");
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>

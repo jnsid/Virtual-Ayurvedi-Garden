@@ -1,0 +1,177 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f0;
+  }
+  
+  h1, h2 {
+    color: #4a773c;
+    text-align: center;
+  }
+  
+  .container {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  /* Landing Page */
+  .landing {
+    height: 100vh;
+    background: url('landingpagebck.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+  
+  .intro-text {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .intro-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  
+  /* Menu Toggle Button */
+  .menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    font-size: 24px;
+    background-color: #4a773c;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+  }
+  
+  /* Slide-out Menu */
+  .side-menu {
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 100%;
+    background-color: #4a773c;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .side-menu.open {
+    left: 0;
+  }
+  
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-menu ul li {
+    margin: 20px;
+  }
+  
+  .side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .side-menu ul li a:hover {
+    color: #4a773c;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  /* Garden Section */
+  .garden {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .plant {
+    width: 300px;
+    background-color: #eaf0e8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .plant:hover {
+    transform: scale(1.05);
+  }
+  
+  .model-wrapper {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  
+  .model-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Plant name hover shows info */
+  .plant-name {
+    font-size: 22px;
+    color: #4a773c;
+    margin: 10px 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  
+  .plant-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 2;
+    overflow-y: auto;
+  }
+  
+  /* Show info on hover over plant name */
+  .plant-name:hover + .plant-info {
+    display: block;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #4a773c;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  footer section {
+    margin-bottom: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    margin: 5px 0;
+  }
+  
